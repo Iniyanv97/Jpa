@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee Record</title>
+</head>
+<body>
+
+<h2>Type ID</h2>
+
+
+<table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Use Thymeleaf to iterate over a list of records -->
+            <tr>
+      		    <th><input type="text" id="id" name="id" th:value="${employee.id}" readonly></th>
+                <th><input type="text" id="name" name="name" th:value="${employee.name}"></th>
+               
+
+            </tr>
+          
+        </tbody>
+    </table>
+    <h1 th:text="${message}"></h1>
+        <a th:href="@{/}">Go to Index</a>
+    xx
+</body>
+</html>

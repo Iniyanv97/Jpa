@@ -1,0 +1,41 @@
+<!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Integration</title>
+</head>
+<body>
+
+    <h1>Hello, Spring Boot!</h1>
+
+    <p>This is a simple HTML page integrated with a Spring Boot application.</p>
+
+    <!-- Table to show a list of records -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Use Thymeleaf to iterate over a list of records -->
+            <tr th:each="record : ${records}">
+                <td th:text="${record.id}"></td>
+                <td th:text="${record.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Links for CRUD operations -->
+    <ul>
+        <li><a href="/create.html">Create</a></li>
+        <li><a href="/read.html">Read</a></li>
+        <li><a href="/update.html">Update</a></li>
+        <li><a href="/delete.html">Delete</a></li>
+    </ul>
+
+</body>
+</html>
